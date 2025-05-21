@@ -12,24 +12,30 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CalculadoraDeIMC"
         tools:targetApi="31">
-        <activity
-            android:name=".UsuarioIMC"
-            android:exported="false" />
-        <activity
-            android:name=".UsuarioIMCAdapter"
-            android:exported="false" /> <!-- Nova activity do formulário -->
-        <activity
-            android:name=".FormularioIMCActivity"
-            android:exported="false" /> <!-- MainActivity como tela inicial -->
+
+        <!-- Tela inicial do app -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Demais Activities (TELAS) -->
+        <activity
+            android:name=".FormularioIMCActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".CalculoImcActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".CadastroUsuarioActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>

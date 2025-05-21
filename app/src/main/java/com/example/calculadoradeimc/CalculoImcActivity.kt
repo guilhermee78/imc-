@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class MainActivity : AppCompatActivity() {
+class CalculoImcActivity : AppCompatActivity() {
 
     companion object {
         const val REQUEST_CODE_FORMULARIO = 1
