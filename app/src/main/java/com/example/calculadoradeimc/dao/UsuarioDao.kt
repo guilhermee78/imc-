@@ -3,7 +3,7 @@ package com.example.calculadoradeimc.dao
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
-import com.example.bancodedados.model.Usuario
+import com.example.calculadoradeimc.model.Usuario
 
 
 @Dao
