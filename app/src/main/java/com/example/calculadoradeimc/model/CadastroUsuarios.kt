@@ -1,12 +1,12 @@
-package com.example.bancodedados
+package com.example.calculadoradeimc
 
 import android.os.Bundle
 import android.widget.Toast
-
+import com.example.calculadoradeimc.model.AppDatabase
 import androidx.appcompat.app.AppCompatActivity
-import com.example.bancodedados.dao.UsuarioDao
-import com.example.bancodedados.databinding.ActivityCadastroUsuariosBinding
-import com.example.bancodedados.model.Usuario
+import com.example.calculadoradeimc.dao.UsuarioDao
+import com.example.calculadoradeimc.databinding.ActivityCadastroUsuariosAgBinding
+import com.example.calculadoradeimc.model.Usuario
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -15,7 +15,7 @@ import kotlinx.coroutines.withContext
 
 class CadastroUsuarios : AppCompatActivity() {
 
-    private lateinit var binding: ActivityCadastroUsuariosBinding
+    private lateinit var binding: ActivityCadastroUsuariosAgBinding
     private var usuarioDao: UsuarioDao? = null
     //sem o !! acerti
     // private laiteinit var usuarioDao: UsuarioDao
@@ -24,7 +24,7 @@ class CadastroUsuarios : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityCadastroUsuariosBinding.inflate(layoutInflater)
+        binding = ActivityCadastroUsuariosAgBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
 

@@ -3,8 +3,8 @@ package com.example.calculadoradeimc.model
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.bancodedados.dao.UsuarioDao
-import com.example.bancodedados.databinding.ActivityAtualizarUsuarioBinding
+import com.example.calculadoradeimc.dao.UsuarioDao
+import com.example.calculadoradeimc.databinding.ActivityAtualizarUsuarioAgBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -12,13 +12,13 @@ import kotlinx.coroutines.withContext
 
 class AtualizarUsuario : AppCompatActivity() {
 
-    private lateinit var binding: ActivityAtualizarUsuarioBinding
+    private lateinit var binding: ActivityAtualizarUsuarioAgBinding
     private lateinit var usuarioDao: UsuarioDao
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
-        binding = ActivityAtualizarUsuarioBinding.inflate(layoutInflater)
+        binding = ActivityAtualizarUsuarioAgBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val nomeRecuperado = intent.extras?.getString("nome")
