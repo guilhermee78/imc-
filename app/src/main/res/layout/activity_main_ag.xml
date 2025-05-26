@@ -18,7 +18,7 @@
             android:id="@+id/btCadastrar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="btCadastrar"
+            android:text="Cadastrar"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textAllCaps="true"
@@ -30,13 +30,20 @@
             android:id="@+id/btCadastrarImc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="btCadastrarImc"
+            android:text="Cadastrar Imc"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textAllCaps="true"
             android:padding="10dp"
             android:layout_margin="20dp"
             />
+
+        <Button
+            android:id="@+id/btListarUsuarios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Listar Usuários Cadastrados"
+            android:layout_marginBottom="16dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"

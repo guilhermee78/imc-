@@ -2,11 +2,10 @@ package com.example.calculadoradeimc
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.calculadoradeimc.databinding.ActivityMainAgBinding
 
-class MainActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainAgBinding
 
@@ -25,8 +24,14 @@ class MainActivity : AppCompatActivity() {
 
         // Botão que leva à tela de cadastro de usuários
         binding.btCadastrar.setOnClickListener {
-            val intent = Intent(this, CadastroUsuarioActivity::class.java)
-            startActivity(intent)
+            val navegarTelaCadastro = Intent(this, CadastroUsuarioActivity::class.java)
+            startActivity(navegarTelaCadastro)
+        }
+
+        // NOVO: Botão que leva à tela de listagem de usuários
+        binding.btListarUsuarios.setOnClickListener {
+            val navegarTelaListagem = Intent(this, ListaUsuariosActivity::class.java)
+            startActivity(navegarTelaListagem)
         }
     }
 }

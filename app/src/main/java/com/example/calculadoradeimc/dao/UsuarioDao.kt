@@ -1,3 +1,5 @@
+// app/src/main/java/com.example.calculadoradeimc/dao/UsuarioDao.kt
+
 package com.example.calculadoradeimc.dao
 
 import androidx.room.Dao
@@ -5,20 +7,18 @@ import androidx.room.Insert
 import androidx.room.Query
 import com.example.calculadoradeimc.model.Usuario
 
-
 @Dao
 interface UsuarioDao {
 
-    @Insert
-    fun inserir(listaUsuarios: MutableList<Usuario>)
+    @Insert // Mantenha a anotação @Insert
+    suspend fun inserir(usuario: Usuario) // Corrigido para receber UM Usuario e ser suspend
 
     @Query("SELECT * FROM tabela_usuarios ORDER BY nome ASC")
-    fun get(): MutableList<Usuario>
+    suspend fun get(): MutableList<Usuario> // Boas práticas: torne o 'get' suspend também para operações de IO
 
     @Query("UPDATE tabela_usuarios SET nome = :novoNome, sobrenome = :novoSobrenome, idade = :novaIdade, celular = :novoCelular " +
-           "WHERE UID = :id")
-
-    fun atualizar(
+            "WHERE UID = :id")
+    suspend fun atualizar( // Torne o 'atualizar' suspend
         id: Int,
         novoNome: String,
         novoSobrenome: String,
@@ -26,5 +26,5 @@ interface UsuarioDao {
         novoCelular: String
     )
     @Query("DELETE FROM tabela_usuarios WHERE uid = :id")
-    fun deletar(id: Int)
+    suspend fun deletar(id: Int) // Torne o 'deletar' suspend
 }
